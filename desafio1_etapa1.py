@@ -186,7 +186,7 @@ def train_monitoring_model(path_csv: str = "dataset_m.csv") -> tuple:
     clf = Pipeline([
         ("preprocess", preprocessor),
         ("model", RandomForestClassifier(
-            n_estimators=400,
+            n_estimators=400,  # baseline para 6 classes (risco 0–5)
             random_state=RANDOM_STATE,
             class_weight="balanced",
             n_jobs=-1,
@@ -237,7 +237,7 @@ def train_triage_model(path_csv: str = "dataset_t.csv") -> tuple:
     clf = Pipeline([
         ("preprocess", preprocessor),
         ("model", RandomForestClassifier(
-            n_estimators=500,
+            n_estimators=500,  # ligeiramente maior para 9 classes (prioridade 0–8)
             random_state=RANDOM_STATE,
             class_weight="balanced",
             n_jobs=-1,
