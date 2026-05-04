@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+venv/
+.venv/
+
+# Data files (large / sensitive – add manually)
+*.csv
+
+# Generated results
+results/*.txt
+
+# IDE
+.vscode/
+.idea/
